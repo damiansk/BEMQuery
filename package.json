@@ -1,10 +1,10 @@
 {
-  "name": "bemquery-package-boilerplate",
+  "name": "BEMQuery",
   "version": "0.0.0",
   "description": "BEMQuery",
-  "main": "dist/bemquery-package-boilerplate.umd.js",
-  "jsnext:main": "dist/bemquery-package-boilerplate.js",
-  "module": "dist/bemquery-package-boilerplate.js",
+  "main": "dist/BEMQuery.umd.js",
+  "jsnext:main": "dist/BEMQuery.js",
+  "module": "dist/BEMQuery.js",
   "scripts": {
     "lint": "eslint -c config/eslint/default.json src/**/*.js tests/**/*.js",
     "pretest": "npm run lint",
@@ -51,14 +51,13 @@
     "tonic-example.js"
   ],
   "author": {
-    "name": "BEMQuery team",
-    "url": "https://github.com/BEMQuery"
+    "name": "bumpMind"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BEMQuery/bemquery-package-boilerplate/issues"
+    "url": "https://github.com/damiansk/BEMQuery/issues"
   },
-  "homepage": "https://github.com/BEMQuery/bemquery-package-boilerplate#readme",
+  "homepage": "https://github.com/damiansk/BEMQuery#readme",
   "tonicExampleFilename": "tonic-example.js",
   "devDependencies": {
     "babel-plugin-external-helpers": "^6.8.0",

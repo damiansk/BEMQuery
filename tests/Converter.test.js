@@ -33,7 +33,7 @@ describe( 'Converter', () => {
 			'block elem:modifier': '.block__elem_modifier',
 			'block:modifier elem': '.block_modifier .block__elem',
 			'block:modifier elem:modifier': '.block_modifier .block__elem_modifier',
-			'block elem elem': '.block__elem__elem_modifier',
+			'block elem elem': '.block__elem__elem',
 			'block elem elem:modifier': '.block__elem__elem_modifier',
 			'block:modifier elem elem': '.block_modifier .block__elem__elem',
 			'block elem:modifier elem': '.block__elem_modifier .block__elem__elem',

@@ -5,15 +5,33 @@ class SelectorEngine {
 		this.converter = converter;
 	}
 
-	find( selector ) {
+	find( selector, context = document ) {
 		const convertedSelector = this.converter.convert( selector );
 		const result = {
 			selector: convertedSelector
 		};
-		const elements = document.querySelectorAll( convertedSelector.CSS );
+		let cssSelector = convertedSelector.CSS;
+		let tmpId = false;
+
+		if ( context !== document ) {
+			if ( !context.id ) {
+				tmpId = true;
+				context.id = `BEMQueryTMP_${Date.now()}`
+			}
+
+			cssSelector = `#${context.id} ${cssSelector}`;
+		}
+
+		const elements = context.querySelectorAll( cssSelector );
 
 		result.elements = Array.from( elements );
+
+		if ( tmpId ) {
+			context.removeAttribute( 'id' );
+		}
 
 		return result;
 	}
 }
+
+export default SelectorEngine;

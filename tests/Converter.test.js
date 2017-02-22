@@ -43,7 +43,7 @@ describe( 'Converter', () => {
 
 		Object.keys( selectors ).forEach( ( selector ) => {
 			const result = converter.convert( selector );
-
+			console.log( result );
 			expect( result ).to.be.an.instanceOf( Selector );
 			expect( result.BEM ).to.equal( selector );
 			expect( result.CSS ).to.equal( selectors[ selector ] );
